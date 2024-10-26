@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Jokenpô</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Jokenpô</h1>
+        
+        <div class="game-area">
+            <div class="player-choice">
+                <h2>Sua Escolha:</h2>
+                <span id="player-choice-display">?</span>
+            </div>
+            
+            <div class="vs">VS</div>
+            
+            <div class="computer-choice">
+                <h2>Escolha da Alexa:</h2>
+                <span id="computer-choice-display">?</span>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button id="pedra" onclick="playHuman('pedra')" class="game-button">
+                <span class="emoji">👊</span>
+                <span class="text">Pedra</span>
+            </button>
+            <button id="papel" onclick="playHuman('papel')" class="game-button">
+                <span class="emoji">✋</span>
+                <span class="text">Papel</span>
+            </button>
+            <button id="tesoura" onclick="playHuman('tesoura')" class="game-button">
+                <span class="emoji">✌️</span>
+                <span class="text">Tesoura</span>
+            </button>
+        </div>
+
+        <div class="result-area">
+            <p id="result" class="result-message"></p>
+            
+            <div class="score-board">
+                <p class="score">Sua pontuação: <span id="human-score">0</span></p>
+                <p class="score">Pontuação da Alexa: <span id="machine-score">0</span></p>
+            </div>
+        </div>
+
+        <button id="reset" onclick="resetGame()" class="reset-button">Reiniciar Jogo</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

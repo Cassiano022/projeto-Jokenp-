@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a1a, #4a4a4a);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    width: 90%;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.game-area {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.player-choice, .computer-choice {
+    text-align: center;
+}
+
+.player-choice h2, .computer-choice h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+#player-choice-display, #computer-choice-display {
+    font-size: 4rem;
+}
+
+.vs {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #666;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.game-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.game-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.game-button .emoji {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.game-button .text {
+    font-size: 1rem;
+}
+
+.result-area {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.result-message {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    min-height: 2rem;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.score {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.reset-button {
+    display: block;
+    margin: 0 auto;
+    padding: 0.8rem 2rem;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.reset-button:hover {
+    background-color: #c82333;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game-button {
+        width: 80%;
+    }
+
+    .score-board {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
